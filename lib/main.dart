@@ -1,44 +1,50 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
-import 'package:helloworld/screens/welcome.dart';
+import 'screens/welcome_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/signup_screen.dart';
+import 'screens/destinations_screen.dart';
+import 'screens/destination_details_screen.dart';
+import 'screens/profile_screen.dart';
+// Assuming MainLayout is the widget you want to use as the home of your app
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      title: 'Explorers App',
+      // Removed the 'home' property.
       theme: ThemeData(
-        // useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: const Welcome(),
-    );
-  }
-}
+        // Define the default brightness and colors.
+        brightness: Brightness.light,
+        primaryColor: Colors.blue,
+        hintColor: Colors.cyan[600],
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});
+        // Define the default font family.
+        fontFamily: 'Georgia',
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: const Center(
-        child: Text(
-          'Hello, World!',
+        // Define the default `TextTheme`.
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          titleLarge: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
+      // Define the routes
+      initialRoute: '/', // Default is '/' but it's nice to be explicit
+      routes: {
+        '/': (context) => const WelcomeScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/destinations': (context) => const destinations_Screen(),
+        '/profile': (context) => const ProfileScreen(),
+        // ... other routes
+      },
     );
   }
 }
