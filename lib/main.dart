@@ -6,7 +6,7 @@ import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
 import 'screens/destinations_screen.dart';
 import 'screens/destination_details_screen.dart';
-import 'screens/profile_screen.dart';
+import 'screens/profile.dart';
 // Assuming MainLayout is the widget you want to use as the home of your app
 
 void main() => runApp(const MyApp());
@@ -41,8 +41,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
-        '/destinations': (context) => const destinations_Screen(),
-        '/profile': (context) => const ProfileScreen(),
+        '/destinations': (context) =>
+            const DestinationPage(), // Replace destinations_Screen with DestinationsScreen
+        '/profile': (context) => const ProfilePage(),
         // ... other routes
       },
     );
