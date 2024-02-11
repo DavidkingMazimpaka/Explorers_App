@@ -1,16 +1,14 @@
-2024/02/11-19:57:14.309 70bc Reusing MANIFEST C:\Users\daluc\AppData\Local\Temp\flutter_tools.69c609e1\flutter_tools_chrome_device.f16ff030\Default\Site Characteristics Database/MANIFEST-000001
-2024/02/11-19:57:14.312 70bc Recovering log #3
-2024/02/11-19:57:14.312 70bc Level-0 table #18: started
-2024/02/11-19:57:14.331 70bc Level-0 table #18: 194 bytes OK
-2024/02/11-19:57:14.331 70bc Recovering log #6
-2024/02/11-19:57:14.331 70bc Level-0 table #19: started
-2024/02/11-19:57:14.346 70bc Level-0 table #19: 165 bytes OK
-2024/02/11-19:57:14.347 70bc Recovering log #10
-2024/02/11-19:57:14.348 70bc Recovering log #15
-2024/02/11-19:57:14.348 70bc Reusing old log C:\Users\daluc\AppData\Local\Temp\flutter_tools.69c609e1\flutter_tools_chrome_device.f16ff030\Default\Site Characteristics Database/000015.log 
-2024/02/11-19:57:14.356 70bc Delete type=0 #3
-2024/02/11-19:57:14.357 70bc Delete type=2 #4
-2024/02/11-19:57:14.357 70bc Delete type=0 #6
-2024/02/11-19:57:14.357 70bc Delete type=2 #7
-2024/02/11-19:57:14.357 70bc Delete type=2 #8
-2024/02/11-19:57:14.357 70bc Delete type=0 #10
+2024/02/11-20:24:34.051 2b3c Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.50d36102\flutter_tools_chrome_device.b94db817\Default\Site Characteristics Database/MANIFEST-000001
+2024/02/11-20:24:34.052 2004 Compacting 9@0 + 0@1 files
+2024/02/11-20:24:34.055 2004 Generated table #26@0: 2 keys, 194 bytes
+2024/02/11-20:24:34.055 2004 Compacted 9@0 + 0@1 files => 194 bytes
+2024/02/11-20:24:34.056 2004 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/02/11-20:24:34.057 2004 Delete type=2 #4
+2024/02/11-20:24:34.057 2004 Delete type=2 #7
+2024/02/11-20:24:34.057 2004 Delete type=2 #8
+2024/02/11-20:24:34.057 2004 Delete type=2 #16
+2024/02/11-20:24:34.057 2004 Delete type=2 #18
+2024/02/11-20:24:34.057 2004 Delete type=2 #19
+2024/02/11-20:24:34.057 2004 Delete type=2 #20
+2024/02/11-20:24:34.057 2004 Delete type=2 #21
+2024/02/11-20:24:34.057 2004 Delete type=2 #23
