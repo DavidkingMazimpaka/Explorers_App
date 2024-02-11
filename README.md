@@ -28,6 +28,9 @@ For support or feedback regarding the Explorer's Path mobile app, please contact
 
 ## Contributing
 
+## Prototype
+Here is the link to the [prototype](https://roline-umunyanas-team.adalo.com/explorer-s-path-app?_gl=1%2Angq6bm%2A_ga%2AMTI3MDIwMjIxLjE3MDYzNjAzNTA.%2A_ga_SWT45DV35L%2AMTcwNjQ2OTQ4MC43LjEuMTcwNjQ3MDE2Ni41NS4wLjA.&target=7cl9fwss4j5ag8kpvnca8wn8s&params=%7B%7D)
+
 ### Creaters and Main Contributors to the Explorer's Path mobile app are:
 
 1. David King Mazimpaka -> @DavidkingMazimpaka
