@@ -6,7 +6,6 @@ import 'package:helloworld/screens/tripdetails.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
-import 'screens/destinations_screen.dart';
 import 'screens/destination_details_screen.dart';
 import 'screens/profile_screen.dart';
 // Assuming MainLayout is the widget you want to use as the home of your app
