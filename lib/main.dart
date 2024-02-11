@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:helloworld/screens/home_screen.dart';
+import 'package:helloworld/screens/tripdetails.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
@@ -41,8 +43,10 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
-        '/destinations': (context) => DestinationsScreen(),
+        '/home': (context) => const HomeScreen(), // Updated to MainLayout
+        '/details': (context) => const DestinationDetailsScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/tripdetails': (context) => const TripDetailsScreen(),
         // ... other routes
       },
     );

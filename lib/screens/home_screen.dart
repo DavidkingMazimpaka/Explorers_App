@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screens/destination_details_screen.dart';
+import 'package:helloworld/screens/destination_details_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

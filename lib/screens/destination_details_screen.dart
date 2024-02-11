@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test1/screens/tripdetails.dart';
+import 'package:helloworld/screens/tripdetails.dart';
 
 class DestinationDetailsScreen extends StatelessWidget {
   const DestinationDetailsScreen({Key? key}) : super(key: key);
