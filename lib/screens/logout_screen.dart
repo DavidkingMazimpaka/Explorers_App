@@ -39,6 +39,7 @@ class LogoutScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Perform logout action here
+                Navigator.pushNamed(context, '/login');
               },
               child: Text('Logout'),
             ),

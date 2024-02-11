@@ -1,13 +1,10 @@
-2024/02/11-18:21:40.990 56fc Log #3: 2 ops saved to Table #11 OK
-2024/02/11-18:21:41.007 56fc Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/000003.log: OK
-2024/02/11-18:21:41.018 56fc Log #6: 1 ops saved to Table #12 OK
-2024/02/11-18:21:41.020 56fc Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/000006.log: OK
-2024/02/11-18:21:41.020 56fc Log #10: 0 ops saved to Table #13 OK
-2024/02/11-18:21:41.020 56fc Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/000010.log: OK
-2024/02/11-18:21:41.021 56fc Table #4: 2 entries OK
-2024/02/11-18:21:41.021 56fc Table #7: 2 entries OK
-2024/02/11-18:21:41.021 56fc Table #8: 1 entries OK
-2024/02/11-18:21:41.022 56fc Table #11: 2 entries OK
-2024/02/11-18:21:41.022 56fc Table #12: 1 entries OK
-2024/02/11-18:21:41.026 56fc Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/MANIFEST-000001: OK
-2024/02/11-18:21:41.033 56fc **** Repaired leveldb C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database; recovered 5 files; 912 bytes. Some data may have been lost. ****
+2024/02/11-18:21:41.037 56fc Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/MANIFEST-000001
+2024/02/11-18:21:41.039 52c4 Compacting 5@0 + 0@1 files
+2024/02/11-18:21:41.045 52c4 Generated table #16@0: 2 keys, 194 bytes
+2024/02/11-18:21:41.046 52c4 Compacted 5@0 + 0@1 files => 194 bytes
+2024/02/11-18:21:41.049 52c4 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/02/11-18:21:41.050 52c4 Delete type=2 #4
+2024/02/11-18:21:41.050 52c4 Delete type=2 #7
+2024/02/11-18:21:41.050 52c4 Delete type=2 #8
+2024/02/11-18:21:41.050 52c4 Delete type=2 #11
+2024/02/11-18:21:41.050 52c4 Delete type=2 #12

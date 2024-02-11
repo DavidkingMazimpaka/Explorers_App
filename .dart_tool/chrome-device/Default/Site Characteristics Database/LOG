@@ -1,10 +1,16 @@
-2024/02/11-18:21:41.037 56fc Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.10036bb3\flutter_tools_chrome_device.10788f58\Default\Site Characteristics Database/MANIFEST-000001
-2024/02/11-18:21:41.039 52c4 Compacting 5@0 + 0@1 files
-2024/02/11-18:21:41.045 52c4 Generated table #16@0: 2 keys, 194 bytes
-2024/02/11-18:21:41.046 52c4 Compacted 5@0 + 0@1 files => 194 bytes
-2024/02/11-18:21:41.049 52c4 compacted to: files[ 0 1 0 0 0 0 0 ]
-2024/02/11-18:21:41.050 52c4 Delete type=2 #4
-2024/02/11-18:21:41.050 52c4 Delete type=2 #7
-2024/02/11-18:21:41.050 52c4 Delete type=2 #8
-2024/02/11-18:21:41.050 52c4 Delete type=2 #11
-2024/02/11-18:21:41.050 52c4 Delete type=2 #12
+2024/02/11-19:57:14.309 70bc Reusing MANIFEST C:\Users\daluc\AppData\Local\Temp\flutter_tools.69c609e1\flutter_tools_chrome_device.f16ff030\Default\Site Characteristics Database/MANIFEST-000001
+2024/02/11-19:57:14.312 70bc Recovering log #3
+2024/02/11-19:57:14.312 70bc Level-0 table #18: started
+2024/02/11-19:57:14.331 70bc Level-0 table #18: 194 bytes OK
+2024/02/11-19:57:14.331 70bc Recovering log #6
+2024/02/11-19:57:14.331 70bc Level-0 table #19: started
+2024/02/11-19:57:14.346 70bc Level-0 table #19: 165 bytes OK
+2024/02/11-19:57:14.347 70bc Recovering log #10
+2024/02/11-19:57:14.348 70bc Recovering log #15
+2024/02/11-19:57:14.348 70bc Reusing old log C:\Users\daluc\AppData\Local\Temp\flutter_tools.69c609e1\flutter_tools_chrome_device.f16ff030\Default\Site Characteristics Database/000015.log 
+2024/02/11-19:57:14.356 70bc Delete type=0 #3
+2024/02/11-19:57:14.357 70bc Delete type=2 #4
+2024/02/11-19:57:14.357 70bc Delete type=0 #6
+2024/02/11-19:57:14.357 70bc Delete type=2 #7
+2024/02/11-19:57:14.357 70bc Delete type=2 #8
+2024/02/11-19:57:14.357 70bc Delete type=0 #10

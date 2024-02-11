@@ -92,7 +92,7 @@ class NavigationPanel extends StatelessWidget {
                 // Handle logout logic here
                 Navigator.pop(context); // Close the drawer
                 // Navigate to the login screen or perform logout operation
-                Navigator.pushNamed(context, '/login');
+                Navigator.pushNamed(context, '/logout');
               },
             ),
             const Spacer(),
