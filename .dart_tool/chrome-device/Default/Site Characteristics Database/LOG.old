@@ -1,5 +1,9 @@
-2024/02/10-20:30:10.912 4128 Log #3: 2 ops saved to Table #4 OK
-2024/02/10-20:30:10.924 4128 Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.60730b1d\flutter_tools_chrome_device.e7ca5e7c\Default\Site Characteristics Database/000003.log: OK
-2024/02/10-20:30:10.925 4128 Table #4: 2 entries OK
-2024/02/10-20:30:10.929 4128 Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.60730b1d\flutter_tools_chrome_device.e7ca5e7c\Default\Site Characteristics Database/MANIFEST-000001: OK
-2024/02/10-20:30:10.938 4128 **** Repaired leveldb C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.60730b1d\flutter_tools_chrome_device.e7ca5e7c\Default\Site Characteristics Database; recovered 1 files; 194 bytes. Some data may have been lost. ****
+2024/02/11-10:44:56.430 1fb4 Log #3: 2 ops saved to Table #7 OK
+2024/02/11-10:44:56.449 1fb4 Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.88086da8\flutter_tools_chrome_device.cae2df69\Default\Site Characteristics Database/000003.log: OK
+2024/02/11-10:44:56.452 1fb4 Log #6: 1 ops saved to Table #8 OK
+2024/02/11-10:44:56.453 1fb4 Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.88086da8\flutter_tools_chrome_device.cae2df69\Default\Site Characteristics Database/000006.log: OK
+2024/02/11-10:44:56.453 1fb4 Table #4: 2 entries OK
+2024/02/11-10:44:56.453 1fb4 Table #7: 2 entries OK
+2024/02/11-10:44:56.453 1fb4 Table #8: 1 entries OK
+2024/02/11-10:44:56.455 1fb4 Archiving C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.88086da8\flutter_tools_chrome_device.cae2df69\Default\Site Characteristics Database/MANIFEST-000001: OK
+2024/02/11-10:44:56.466 1fb4 **** Repaired leveldb C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.88086da8\flutter_tools_chrome_device.cae2df69\Default\Site Characteristics Database; recovered 3 files; 553 bytes. Some data may have been lost. ****

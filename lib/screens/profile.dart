@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Row(
         children: [
           NavigationPanel(),
@@ -57,23 +57,23 @@ class NavigationPanel extends StatelessWidget {
               height: 100,
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.place, color: Colors.white),
-            title: const Text('Destinations', style: TextStyle(color: Colors.white)),
+          const ListTile(
+            leading: Icon(Icons.place, color: Colors.white),
+            title: Text('Destinations', style: TextStyle(color: Colors.white)),
           ),
-          ListTile(
-            leading: const Icon(Icons.settings, color: Colors.white),
-            title: const Text('Settings', style: TextStyle(color: Colors.white)),
+          const ListTile(
+            leading: Icon(Icons.settings, color: Colors.white),
+            title: Text('Settings', style: TextStyle(color: Colors.white)),
           ),
-          ListTile(
-            leading: const Icon(Icons.exit_to_app, color: Colors.white),
-            title: const Text('Log Out', style: TextStyle(color: Colors.white)),
+          const ListTile(
+            leading: Icon(Icons.exit_to_app, color: Colors.white),
+            title: Text('Log Out', style: TextStyle(color: Colors.white)),
           ),
           const Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Row(
-              children: const [
+              children: [
                 Icon(Icons.account_circle, color: Colors.white, size: 24.0),
                 SizedBox(width: 8.0),
                 Text('User username', style: TextStyle(color: Colors.white)),
@@ -91,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainPanel();
+    return const MainPanel();
   }
 }
 
@@ -126,9 +126,9 @@ class ProfileSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: EdgeInsets.all(30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -136,7 +136,7 @@ class ProfileSection extends StatelessWidget {
               backgroundColor: Colors.grey,
               radius: 40,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Text(
               '@Username',
               style: TextStyle(
@@ -162,12 +162,12 @@ class FavoriteDestinations extends StatelessWidget {
       ),
       color: Colors.grey,
       child: Container(
-        padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
-        child: Column(
+        padding: const EdgeInsets.only(top: 10.0, bottom: 20.0),
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(7.0),
+              padding: EdgeInsets.all(7.0),
               child: Text(
                 'Favorite Destinations',
                 style: TextStyle(
@@ -197,7 +197,7 @@ class TripsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -209,7 +209,7 @@ class TripsSection extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Icon(

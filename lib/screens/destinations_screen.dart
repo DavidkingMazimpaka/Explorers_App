@@ -91,10 +91,10 @@ class DestinationPage extends StatelessWidget {
         child: NavigationPanel(),
       ),
       body: ListView(
-        children: [
-          const HeaderSection(),
-          const FeaturedDestinationsSection(),
-          const AllDestinationsSection(),
+        children: const [
+          HeaderSection(),
+          FeaturedDestinationsSection(),
+          AllDestinationsSection(),
         ],
       ),
     );
@@ -135,7 +135,7 @@ class FeaturedDestinationsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(3, (index) => DestinationCard(isFeatured: true)),
+      children: List.generate(3, (index) => const DestinationCard(isFeatured: true)),
     );
   }
 }
@@ -159,7 +159,7 @@ class AllDestinationsSection extends StatelessWidget {
           ),
         ),
         Column(
-          children: List.generate(4, (index) => DestinationCard(isFeatured: false)),
+          children: List.generate(4, (index) => const DestinationCard(isFeatured: false)),
         ),
       ],
     );
@@ -172,7 +172,7 @@ class AllDestinationsSection extends StatelessWidget {
 class DestinationCard extends StatelessWidget {
   final bool isFeatured;
 
-  DestinationCard({super.key, required this.isFeatured});
+  const DestinationCard({super.key, required this.isFeatured});
 
   @override
   Widget build(BuildContext context) {
