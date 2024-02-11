@@ -9,9 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Travel Profile',
-      home: ProfilePage(),
+      routes: {
+        '/': (context) => const ProfilePage(),
+      },
     );
   }
 }
@@ -21,12 +23,12 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Row(
         children: [
           NavigationPanel(),
           Expanded(
-            child: MainPanel(),
+            child: ProfileScreen(), // Change here
           ),
         ],
       ),
@@ -40,23 +42,21 @@ class NavigationPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200, // Set the width of the navigation bar
-      color: const Color(0xFF3B4948), // The color you provided earlier
+      width: 200,
+      color: const Color(0xFF3B4948),
       child: Column(
         children: [
-          // Top section with the image
           Padding(
             padding: const EdgeInsets.only(
               top: 20.0,
               bottom: 30.0,
-            ), // Adjust the padding as needed
+            ),
             child: Image.asset(
-              'images/explorer.png', // Replace with your actual image path
-              width: 100, // Set the width as needed
-              height: 100, // Set the height as needed
+              'images/explorer.png',
+              width: 100,
+              height: 100,
             ),
           ),
-          // Middle section with menu items, no padding needed between items
           ListTile(
             leading: const Icon(Icons.place, color: Colors.white),
             title: const Text('Destinations', style: TextStyle(color: Colors.white)),
@@ -69,16 +69,14 @@ class NavigationPanel extends StatelessWidget {
             leading: const Icon(Icons.exit_to_app, color: Colors.white),
             title: const Text('Log Out', style: TextStyle(color: Colors.white)),
           ),
-          // Spacer to push the bottom content to the end
           const Spacer(),
-          // Bottom section with the user's username
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Row(
-              children: [
-                const Icon(Icons.account_circle, color: Colors.white, size: 24.0),
-                const SizedBox(width: 8.0),
-                const Text('User username', style: TextStyle(color: Colors.white)),
+              children: const [
+                Icon(Icons.account_circle, color: Colors.white, size: 24.0),
+                SizedBox(width: 8.0),
+                Text('User username', style: TextStyle(color: Colors.white)),
               ],
             ),
           ),
@@ -88,29 +86,35 @@ class NavigationPanel extends StatelessWidget {
   }
 }
 
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MainPanel();
+  }
+}
 
 class MainPanel extends StatelessWidget {
   const MainPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(30.0), // Adjust padding as needed
-        color: Colors.white, // Set the background color to white
-        child: const SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ProfileSection(),
-              SizedBox(height: 35), // Space between sections
-              FavoriteDestinations(),
-              SizedBox(height: 60), // Space between sections
-              TripsSection(),
-              SizedBox(height: 80), // Space between sections
-              FeedbackForm(),
-            ],
-          ),
+    return Container(
+      padding: const EdgeInsets.all(30.0),
+      color: Colors.white,
+      child: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ProfileSection(),
+            SizedBox(height: 35),
+            FavoriteDestinations(),
+            SizedBox(height: 60),
+            TripsSection(),
+            SizedBox(height: 80),
+            FeedbackForm(),
+          ],
         ),
       ),
     );
@@ -122,23 +126,22 @@ class ProfileSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center( // Center the ProfileSection vertically
+    return Center(
       child: Padding(
-        padding: const EdgeInsets.all(30.0), // Padding inside the section
+        padding: const EdgeInsets.all(30.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Align content vertically
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              // Replace with your user's avatar image
               backgroundColor: Colors.grey,
-              radius: 40, // Adjust the size as needed
+              radius: 40,
             ),
-            const SizedBox(height: 10), // Add space between the avatar and the username
+            const SizedBox(height: 10),
             Text(
-              '@Username', // Display the username
+              '@Username',
               style: TextStyle(
-                fontSize: 24, // Adjust the font size as needed
-                fontWeight: FontWeight.bold, // Make the username bold
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ],
@@ -148,25 +151,23 @@ class ProfileSection extends StatelessWidget {
   }
 }
 
-
 class FavoriteDestinations extends StatelessWidget {
   const FavoriteDestinations({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0), //border radius
+        borderRadius: BorderRadius.circular(10.0),
       ),
-      color: Colors.grey, //background color
+      color: Colors.grey,
       child: Container(
-        padding: EdgeInsets.only(top: 10.0, bottom: 20.0), // Add bottom padding
+        padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(7.0),  //padding inside
+              padding: const EdgeInsets.all(7.0),
               child: Text(
                 'Favorite Destinations',
                 style: TextStyle(
@@ -178,24 +179,18 @@ class FavoriteDestinations extends StatelessWidget {
 
             ListTile(
               leading: CircleAvatar(
-                //picture
                 backgroundImage: AssetImage('path/to/your/image.png'),
                 radius: 30,
               ),
               title: Text('Destination name'),
               subtitle: Text('Destination description'),
             ),
-            // Repeat ListTiles for each destination
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
 
 class TripsSection extends StatelessWidget {
   const TripsSection({Key? key}) : super(key: key);
@@ -204,26 +199,25 @@ class TripsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
             'My Trips',
             style: TextStyle(
-              fontSize: 20, // Adjust the font size as needed
-              fontWeight: FontWeight.bold, // Make the title bold
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0), // Add padding inside the section
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Icon(
                   Icons.card_travel,
-                  size: 48, // Adjust the icon size as needed
-                  color: Colors.grey, // Set the icon color
+                  size: 48,
+                  color: Colors.grey,
                 ),
                 Text('No Trips Yet'),
-                // More content can be added here
               ],
             ),
           ),
@@ -239,39 +233,34 @@ class FeedbackForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 20.0), // Add vertical padding
+      padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             'Your Feedback',
             style: TextStyle(
-              fontSize: 20, // Adjust the font size as needed
-              fontWeight: FontWeight.bold, // Make the title bold
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
           const TextField(
             decoration: InputDecoration(
               hintText: 'Enter your feedback...',
-              border: OutlineInputBorder(), // Add a border to the TextField
+              border: OutlineInputBorder(),
             ),
           ),
-          const SizedBox(
-              height: 10), // Add space between the TextField and the Checkbox
+          const SizedBox(height: 10),
           CheckboxListTile(
             value: false,
-            onChanged: (bool? newValue) {
-              // Handle the checkbox state change
-            },
-            title: const Text('Enjoyable'), // Add text next to the checkbox
+            onChanged: (bool? newValue) {},
+            title: const Text('Enjoyable'),
           ),
           ElevatedButton(
-            onPressed: () {
-              // Handle feedback submission
-            },
+            onPressed: () {},
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: Colors.black, // Set the text color
+              backgroundColor: Colors.black,
             ),
             child: const Text('CREATE FEEDBACK'),
           ),
