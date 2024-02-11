@@ -12,12 +12,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LogoutPage(),
+      home: LogoutScreen(),
     );
   }
 }
 
-class LogoutPage extends StatelessWidget {
+class LogoutScreen extends StatelessWidget {
+  static const String routeName = '/logout';
+
+  const LogoutScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

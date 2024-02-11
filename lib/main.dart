@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:helloworld/screens/home_screen.dart';
+import 'package:helloworld/screens/logout_screen.dart';
 import 'package:helloworld/screens/tripdetails.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/login_screen.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/details': (context) => const DestinationDetailsScreen(),
         '/profile': (context) => const ProfileScreen(),
         '/tripdetails': (context) => const TripDetailsScreen(),
+        '/logout': (context) => const LogoutScreen(),
         // ... other routes
       },
     );
