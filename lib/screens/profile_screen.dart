@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:helloworld/models/feedback.dart';
+import 'package:helloworld/firestore_service.dart';
 
 class ProfileScreen extends StatelessWidget {
   static const String routeName = '/profile';
@@ -220,8 +223,21 @@ class TripsSection extends StatelessWidget {
   }
 }
 
-class FeedbackForm extends StatelessWidget {
+class FeedbackForm extends StatefulWidget {
   const FeedbackForm({Key? key}) : super(key: key);
+
+  @override
+  State<FeedbackForm> createState() => _FeedbackFormState();
+}
+
+class _FeedbackFormState extends State<FeedbackForm> {
+  final TextEditingController _feedbackController = TextEditingController();
+
+  @override
+  void dispose() {
+    _feedbackController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -237,20 +253,46 @@ class FeedbackForm extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            controller: _feedbackController,
+            decoration: const InputDecoration(
               hintText: 'Enter your feedback...',
               border: OutlineInputBorder(),
             ),
           ),
           const SizedBox(height: 10),
-          CheckboxListTile(
-            value: false,
-            onChanged: (bool? newValue) {},
-            title: const Text('Enjoyable'),
-          ),
+          // The CheckboxListTile and other components remain unchanged
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              if (_feedbackController.text.isNotEmpty) {
+                // Instantiate FirestoreService
+                FirestoreService firestoreService = FirestoreService();
+                // Use the instance to call addFeedbackToFirestore
+                firestoreService
+                    .addFeedbackToFirestore(FeedbackItem(
+                  userId:
+                      "YourUserIdHere", // Adjust according to your user management logic
+                  content: _feedbackController.text,
+                  createDate: DateTime.now(),
+                ))
+                    .then((_) {
+                  _feedbackController.clear();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                        content: Text('Feedback submitted successfully!')),
+                  );
+                }).catchError((error) {
+                  if (kDebugMode) {
+                    print("Error submitting feedback: $error");
+                  }
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                        content: Text(
+                            'Failed to submit feedback. Please try again.')),
+                  );
+                });
+              }
+            },
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Colors.black,

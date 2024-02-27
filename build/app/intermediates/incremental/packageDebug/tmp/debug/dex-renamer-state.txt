@@ -1,0 +1,4 @@
+#Tue Feb 20 11:15:34 GMT+02:00 2024
+base.0=C\:\\Users\\Lenovo\\OneDrive\\Desktop\\ALU\\Explorers_App\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
