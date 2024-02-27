@@ -35,15 +35,15 @@ class Destination {
     );
   }
 
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'description': description,
-      'imageUrl': imageUrl,
-      'rating': rating,
-      'featured': featured,
-      'created': Timestamp.fromDate(created),
-      'updated': Timestamp.fromDate(updated),
-    };
-  }
+  // Map<String, dynamic> toMap() {
+  //   return {
+  //     'name': name,
+  //     'description': description,
+  //     'imageUrl': imageUrl,
+  //     'rating': rating,
+  //     'featured': featured,
+  //     'created': Timestamp.fromDate(created),
+  //     'updated': Timestamp.fromDate(updated),
+  //   };
+  // }
 }
