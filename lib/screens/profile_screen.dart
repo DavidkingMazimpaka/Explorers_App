@@ -273,7 +273,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
                   userId:
                       "YourUserIdHere", // Adjust according to your user management logic
                   content: _feedbackController.text,
-                  createDate: DateTime.now(),
+                  createDate: DateTime.now(), id: '',
                 ))
                     .then((_) {
                   _feedbackController.clear();

@@ -1,17 +1,15 @@
 class FeedbackItem {
-  String? feedbackId; 
+  String id;
   String userId;
   String content;
   DateTime createDate;
 
-
   FeedbackItem({
-    this.feedbackId,
+    required this.id,
     required this.userId,
     required this.content,
     required this.createDate,
   });
-
 
   Map<String, dynamic> toMap() {
     return {
@@ -21,14 +19,12 @@ class FeedbackItem {
     };
   }
 
-
-  
-  factory FeedbackItem.fromFirestore(Map<String, dynamic> firestoreDocument) {
+  factory FeedbackItem.fromMap(Map<String, dynamic> map, String documentId) {
     return FeedbackItem(
-      feedbackId: firestoreDocument['feedbackId'],
-      userId: firestoreDocument['userId'],
-      content: firestoreDocument['content'],
-      createDate: DateTime.parse(firestoreDocument['createDate']),
+      id: documentId,
+      userId: map['userId'] ?? '',
+      content: map['content'] ?? '',
+      createDate: DateTime.parse(map['createDate'] ?? DateTime.now().toIso8601String()),
     );
   }
 }

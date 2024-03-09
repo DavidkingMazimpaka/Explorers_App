@@ -1,29 +1,18 @@
-2024/02/27-22:00:32.966 2228 Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.794f5275\flutter_tools_chrome_device.fdfecf42\Default\Site Characteristics Database/MANIFEST-000001
-2024/02/27-22:00:32.967 2228 Recovering log #3
-2024/02/27-22:00:32.968 2228 Level-0 table #40: started
-2024/02/27-22:00:32.973 2228 Level-0 table #40: 194 bytes OK
-2024/02/27-22:00:32.973 2228 Recovering log #6
-2024/02/27-22:00:32.973 2228 Level-0 table #41: started
-2024/02/27-22:00:32.976 2228 Level-0 table #41: 165 bytes OK
-2024/02/27-22:00:32.976 2228 Recovering log #10
-2024/02/27-22:00:32.976 2228 Recovering log #15
-2024/02/27-22:00:32.976 2228 Level-0 table #42: started
-2024/02/27-22:00:32.978 2228 Level-0 table #42: 196 bytes OK
-2024/02/27-22:00:32.979 2228 Recovering log #25
-2024/02/27-22:00:32.979 2228 Recovering log #37
-2024/02/27-22:00:32.979 2228 Reusing old log C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.794f5275\flutter_tools_chrome_device.fdfecf42\Default\Site Characteristics Database/000037.log 
-2024/02/27-22:00:32.982 2228 Delete type=0 #3
-2024/02/27-22:00:32.982 2228 Delete type=2 #4
-2024/02/27-22:00:32.982 2228 Delete type=0 #6
-2024/02/27-22:00:32.982 2228 Delete type=2 #7
-2024/02/27-22:00:32.982 2228 Delete type=2 #8
-2024/02/27-22:00:32.982 2228 Delete type=0 #10
-2024/02/27-22:00:32.982 2228 Delete type=0 #15
-2024/02/27-22:00:32.982 2228 Delete type=2 #16
-2024/02/27-22:00:32.982 2228 Delete type=2 #18
-2024/02/27-22:00:32.982 2228 Delete type=2 #19
-2024/02/27-22:00:32.982 2228 Delete type=0 #25
-2024/02/27-22:00:32.982 2228 Delete type=2 #26
-2024/02/27-22:00:32.982 2228 Delete type=2 #28
-2024/02/27-22:00:32.982 2228 Delete type=2 #29
-2024/02/27-22:00:32.982 2228 Delete type=2 #30
+2024/03/09-14:37:57.976 1f04 Reusing MANIFEST C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.828f071d\flutter_tools_chrome_device.a69aafeb\Default\Site Characteristics Database/MANIFEST-000001
+2024/03/09-14:37:57.977 1f04 Recovering log #37
+2024/03/09-14:37:57.977 1f04 Reusing old log C:\Users\Lenovo\AppData\Local\Temp\flutter_tools.828f071d\flutter_tools_chrome_device.a69aafeb\Default\Site Characteristics Database/000037.log 
+2024/03/09-14:37:57.978 1f04 Delete type=0 #3
+2024/03/09-14:37:57.978 1f04 Delete type=2 #4
+2024/03/09-14:37:57.979 1f04 Delete type=0 #6
+2024/03/09-14:37:57.979 1f04 Delete type=2 #7
+2024/03/09-14:37:57.979 1f04 Delete type=2 #8
+2024/03/09-14:37:57.979 1f04 Delete type=0 #10
+2024/03/09-14:37:57.979 1f04 Delete type=0 #15
+2024/03/09-14:37:57.980 1f04 Delete type=2 #16
+2024/03/09-14:37:57.980 1f04 Delete type=2 #18
+2024/03/09-14:37:57.980 1f04 Delete type=2 #19
+2024/03/09-14:37:57.980 1f04 Delete type=0 #25
+2024/03/09-14:37:57.980 1f04 Delete type=2 #26
+2024/03/09-14:37:57.980 1f04 Delete type=2 #28
+2024/03/09-14:37:57.980 1f04 Delete type=2 #29
+2024/03/09-14:37:57.980 1f04 Delete type=2 #30

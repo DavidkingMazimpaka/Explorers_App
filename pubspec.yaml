@@ -10,6 +10,10 @@ environment:
 dependencies:
   cloud_firestore: ^4.15.5
   firebase_core: ^2.25.4
+  firebase_auth: ^4.17.8
+  google_sign_in: ^5.2.1
+  firebase_storage: ^11.6.6
+  font_awesome_flutter: ^10.7.0
   flutter:
     sdk: flutter
 
@@ -17,10 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.2
-cloud_firestore: ^4.15.5
-firebase_core: any
-firebase_auth: ^4.17.5
-firebase_storage: ^11.6.6
+
 
 flutter:
   uses-material-design: true
