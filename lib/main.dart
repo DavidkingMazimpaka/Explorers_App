@@ -1,5 +1,7 @@
 // ignore_for_file: unused_import
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:helloworld/screens/home_screen.dart';
 import 'package:helloworld/screens/logout_screen.dart';
@@ -15,6 +17,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  Platform.isAndroid ? await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: 'AIzaSyDWIjc77rGqlmxx0Ru11QEITRQFbB3w6bk', 
+      appId: '1:449861433869:android:a4a919c2692e07529d7344', 
+      messagingSenderId: '449861433869', 
+      projectId: 'gugu-36085',
+      )
+  ) : await Firebase.initializeApp();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 

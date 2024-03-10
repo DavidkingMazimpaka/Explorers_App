@@ -37,7 +37,7 @@ class NavigationPanel extends StatelessWidget {
                 bottom: 30.0,
               ),
               child: Image.asset(
-                'explorer.png',
+                'assets/explorer.png',
                 width: 100,
                 height: 100,
               ),

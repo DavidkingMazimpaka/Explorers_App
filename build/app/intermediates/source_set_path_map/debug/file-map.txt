@@ -1,12 +1,23 @@
-com.example.helloworld.app-jetified-window-1.0.0-beta04-0 C:\Users\Lenovo\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
-com.example.helloworld.app-jetified-annotation-experimental-1.1.0-1 C:\Users\Lenovo\.gradle\caches\transforms-3\6c0c163cc77ae6c91f9f7dfcd179c29c\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.helloworld.app-core-1.6.0-2 C:\Users\Lenovo\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\res
-com.example.helloworld.app-jetified-window-java-1.0.0-beta04-3 C:\Users\Lenovo\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
-com.example.helloworld.app-debug-4 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\android\app\src\debug\res
-com.example.helloworld.app-main-5 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\android\app\src\main\res
-com.example.helloworld.app-pngs-6 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\generated\res\pngs\debug
-com.example.helloworld.app-resValues-7 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\generated\res\resValues\debug
-com.example.helloworld.app-rs-8 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\generated\res\rs\debug
-com.example.helloworld.app-mergeDebugResources-9 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.helloworld.app-mergeDebugResources-10 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.helloworld.app-merged_res-11 C:\Users\Lenovo\OneDrive\Desktop\ALU\Explorers_App\build\app\intermediates\merged_res\debug
+com.example.helloworld.app-jetified-play-services-basement-18.3.0-0 C:\Users\Lenovo\.gradle\caches\transforms-3\06cc9f101885a01dee352cd1b0f1bb75\transformed\jetified-play-services-basement-18.3.0\res
+com.example.helloworld.app-jetified-window-java-1.0.0-beta04-1 C:\Users\Lenovo\.gradle\caches\transforms-3\082b4a2d9716ea47d774166cb2b5a04f\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.helloworld.app-jetified-play-services-base-18.1.0-2 C:\Users\Lenovo\.gradle\caches\transforms-3\173923cf6a829a576232e3eb0550d4bc\transformed\jetified-play-services-base-18.1.0\res
+com.example.helloworld.app-browser-1.4.0-3 C:\Users\Lenovo\.gradle\caches\transforms-3\2c49d40c2a3979c0dd08957ea03c67ee\transformed\browser-1.4.0\res
+com.example.helloworld.app-jetified-play-services-auth-20.7.0-4 C:\Users\Lenovo\.gradle\caches\transforms-3\779b4cb9b9c2ea7433a387c9f0283ca9\transformed\jetified-play-services-auth-20.7.0\res
+com.example.helloworld.app-jetified-firebase-common-20.4.2-5 C:\Users\Lenovo\.gradle\caches\transforms-3\7e2f004a3f77d735d27a7796c7f57035\transformed\jetified-firebase-common-20.4.2\res
+com.example.helloworld.app-jetified-annotation-experimental-1.1.0-6 C:\Users\Lenovo\.gradle\caches\transforms-3\a3e500b6247b340623bb5642aed352b2\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.helloworld.app-core-1.6.0-7 C:\Users\Lenovo\.gradle\caches\transforms-3\aeb903732bb735ca757684c3c628fa7f\transformed\core-1.6.0\res
+com.example.helloworld.app-jetified-window-1.0.0-beta04-8 C:\Users\Lenovo\.gradle\caches\transforms-3\c70ef81f53a2eaeb64fdaccdcb4bac4f\transformed\jetified-window-1.0.0-beta04\res
+com.example.helloworld.app-debug-9 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\android\app\src\debug\res
+com.example.helloworld.app-main-10 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\android\app\src\main\res
+com.example.helloworld.app-RES-11 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\RES\processDebugGoogleServices
+com.example.helloworld.app-pngs-12 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\generated\res\pngs\debug
+com.example.helloworld.app-resValues-13 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\generated\res\resValues\debug
+com.example.helloworld.app-rs-14 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\generated\res\rs\debug
+com.example.helloworld.app-mergeDebugResources-15 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.helloworld.app-mergeDebugResources-16 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.helloworld.app-merged_res-17 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\app\intermediates\merged_res\debug
+com.example.helloworld.app-packaged_res-18 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\cloud_firestore\intermediates\packaged_res\debug
+com.example.helloworld.app-packaged_res-19 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\firebase_auth\intermediates\packaged_res\debug
+com.example.helloworld.app-packaged_res-20 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\firebase_core\intermediates\packaged_res\debug
+com.example.helloworld.app-packaged_res-21 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\firebase_storage\intermediates\packaged_res\debug
+com.example.helloworld.app-packaged_res-22 C:\Users\Lenovo\Desktop\Projects\ALU projects\Mobile\Explorer's path\Explorers_App\build\google_sign_in_android\intermediates\packaged_res\debug
