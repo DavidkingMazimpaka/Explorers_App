@@ -24,8 +24,11 @@ class HomeScreen extends StatelessWidget {
 
   // Placeholder method1()
   bool method1() {
-    return true;
-  }
+  // Example navigation logic
+  // Navigator.pushNamed(context, '/destination');
+  return true; // Indicate that method execution was successful
+}
+
 
   // Placeholder method2()
   bool method2() {

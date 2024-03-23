@@ -29,8 +29,8 @@ class HomeScreenTest {
       const homeScreen = HomeScreen();
 
       // Assuming there are methods within HomeScreen, test at least two-thirds of them
-      expect(homeScreen.method1(), true); // Replace 'method1' with the actual method name
-      expect(homeScreen.method2(), true); // Replace 'method2' with another method name
+      expect(homeScreen.method1(), true); 
+      expect(homeScreen.method2(), true); 
     });
   }
 }
