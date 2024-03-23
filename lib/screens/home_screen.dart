@@ -22,6 +22,16 @@ class HomeScreen extends StatelessWidget {
 
   const HomeScreen({super.key});
 
+  // Placeholder method1()
+  bool method1() {
+    return true;
+  }
+
+  // Placeholder method2()
+  bool method2() {
+    return true;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
