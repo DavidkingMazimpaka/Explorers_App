@@ -34,5 +34,5 @@ Here is the link to the [prototype](https://roline-umunyanas-team.adalo.com/expl
 ### Creaters and Main Contributors to the Explorer's Path mobile app are:
 
 1. David King Mazimpaka -> @DavidkingMazimpaka
-2. Roline Munyana -> @rumunyana
-3. Maurren Mushimiyimana -> @mnshimiyimana 
+2. Roline Umunyana -> @rumunyana
+3. Maureen Nshimiyimana -> @mnshimiyimana 
