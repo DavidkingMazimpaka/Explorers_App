@@ -26,27 +26,27 @@ class FirestoreService {
     await _db.collection('Users').doc(userId).delete();
   }
 
-  // Destinations CRUD Operations
-  Future<void> addDestination(Destination destination) async {
-    await _db.collection('Destinations').add(destination.toMap());
-  }
+  // // Destinations CRUD Operations
+  // Future<void> addDestination(Destination destination) async {
+  //   await _db.collection('Destinations').add(destination.toMap());
+  // }
 
-  Stream<List<Destination>> getDestinations() {
-    return _db.collection('Destinations').snapshots().map((snapshot) => snapshot
-        .docs
-        .map((doc) =>
-            Destination.fromMap(doc.data(), doc.id))
-        .toList());
-  }
+  // Stream<List<Destination>> getDestinations() {
+  //   return _db.collection('Destinations').snapshots().map((snapshot) => snapshot
+  //       .docs
+  //       .map((doc) =>
+  //           Destination.fromMap(doc.data(), doc.id))
+  //       .toList());
+  // }
 
-  Future<void> updateDestination(
-      String destinationId, Map<String, dynamic> data) async {
-    await _db.collection('Destinations').doc(destinationId).update(data);
-  }
+  // Future<void> updateDestination(
+  //     String destinationId, Map<String, dynamic> data) async {
+  //   await _db.collection('Destinations').doc(destinationId).update(data);
+  // }
 
-  Future<void> deleteDestination(String destinationId) async {
-    await _db.collection('Destinations').doc(destinationId).delete();
-  }
+  // Future<void> deleteDestination(String destinationId) async {
+  //   await _db.collection('Destinations').doc(destinationId).delete();
+  // }
 
   // Feedback CRUD Operations
   Future<void> addFeedbackToFirestore(FeedbackItem feedback) async {
