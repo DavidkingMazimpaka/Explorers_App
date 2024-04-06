@@ -1,6 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:helloworld/models/destinations.dart';
 import 'package:helloworld/screens/destination_details_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -302,39 +308,172 @@ class FeaturedDestinationsSection extends StatelessWidget {
   }
 }
 
-class AllDestinationsSection extends StatelessWidget {
+// class AllDestinationsSection extends StatelessWidget {
+//   const AllDestinationsSection({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment
+//           .center, // Align children in the center horizontally
+//       children: [
+//         const Padding(
+//           padding: EdgeInsets.all(40.0),
+//           child: Text(
+//             'All Destinations',
+//             textAlign:
+//                 TextAlign.center, // Align the text in the center horizontally
+//             style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+//           ),
+//         ),
+//         Column(
+//           children: List.generate(
+//             4,
+//             (index) => DestinationCard(
+//               isFeatured: false,
+//               onTap: () => Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) => const DestinationDetailsScreen(),
+//                 ),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+// class AllDestinationsSection extends StatefulWidget {
+//   const AllDestinationsSection({super.key});
+
+//   @override
+//   _AllDestinationsSectionState createState() => _AllDestinationsSectionState();
+// }
+
+// class _AllDestinationsSectionState extends State<AllDestinationsSection> {
+//   late Future<List<Destination>> _destinations;
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     _destinations = fetchDestinations();
+//   }
+
+//   Future<List<Destination>> fetchDestinations() async {
+//     final uri = Uri.parse('https://api.opentripmap.com/0.1/en/places/radius')
+//         .replace(queryParameters: {
+//       'radius': '10000', // The radius within which to find places
+//       'lon': '30.1242741', // Replace with actual longitude
+//       'lat': '-1.966177', // Replace with actual latitude
+//       'apikey':
+//           '5ae2e3f221c38a28845f05b6b36b94feeea7a570f166f48d2526c157', // Replace with your actual API key
+//     });
+
+//     final response = await http.get(uri);
+
+//     if (response.statusCode == 200) {
+//       final List<dynamic> data = json.decode(response.body)['features'];
+//       return data.map((json) => Destination.fromApiJson(json)).toList();
+//     } else {
+//       throw Exception('Failed to load destinations from the API');
+//     }
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return FutureBuilder<List<Destination>>(
+//       future: _destinations,
+//       builder: (context, snapshot) {
+//         if (snapshot.connectionState == ConnectionState.waiting) {
+//           return const CircularProgressIndicator();
+//         } else if (snapshot.hasError) {
+//           return Text('Error: ${snapshot.error}');
+//         } else if (snapshot.hasData) {
+//           return ListView.builder(
+//             itemCount: snapshot.data!.length,
+//             itemBuilder: (context, index) {
+//               final destination = snapshot.data![index];
+//               return ListTile(
+//                 title: Text(destination.name),
+//                 subtitle: Text(destination.description),
+//                 leading: Image.network(destination.imageUrl),
+//               );
+//             },
+//           );
+//         } else {
+//           return const Text('No destinations found.');
+//         }
+//       },
+//     );
+//   }
+// }
+
+class AllDestinationsSection extends StatefulWidget {
   const AllDestinationsSection({super.key});
 
   @override
+  State<AllDestinationsSection> createState() => _AllDestinationsSectionState();
+}
+
+class _AllDestinationsSectionState extends State<AllDestinationsSection> {
+  late Future<List<Destination>> _destinations;
+
+  @override
+  void initState() {
+    super.initState();
+    _destinations = fetchDestinations();
+  }
+
+  Future<List<Destination>> fetchDestinations() async {
+    final uri = Uri.parse('https://api.opentripmap.com/0.1/en/places/radius')
+        .replace(queryParameters: {
+      'radius': '10000', // adjust as needed
+      'lon': '30.1157596', // adjust as needed
+      'lat': '-1.9626447', // adjust as needed
+      'apikey':
+          '5ae2e3f221c38a28845f05b6b36b94feeea7a570f166f48d2526c157', // replace with your actual API key
+    });
+
+    final response = await http.get(uri);
+
+    if (response.statusCode == 200) {
+      final List data = json.decode(response.body)['features'];
+      return data.map((json) => Destination.fromApiJson(json)).toList();
+    } else {
+      throw Exception('Failed to load destinations');
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment
-          .center, // Align children in the center horizontally
-      children: [
-        const Padding(
-          padding: EdgeInsets.all(40.0),
-          child: Text(
-            'All Destinations',
-            textAlign:
-                TextAlign.center, // Align the text in the center horizontally
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-          ),
-        ),
-        Column(
-          children: List.generate(
-            4,
-            (index) => DestinationCard(
-              isFeatured: false,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const DestinationDetailsScreen(),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ],
+    return FutureBuilder<List<Destination>>(
+      future: _destinations,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Text('Error: ${snapshot.error}');
+        } else if (snapshot.hasData) {
+          return ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: snapshot.data!.length,
+            itemBuilder: (context, index) {
+              final destination = snapshot.data![index];
+              return ListTile(
+                title: Text(destination.name),
+                subtitle: Text(
+                    'Distance: ${destination.distance.toStringAsFixed(2)} meters\nRate: ${destination.rate}\nKinds: ${destination.kinds}'),
+                leading: const Icon(Icons.place), // Placeholder icon
+              );
+            },
+          );
+        } else {
+          return const Text('No destinations found.');
+        }
+      },
     );
   }
 }
