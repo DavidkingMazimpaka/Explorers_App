@@ -20,9 +20,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 //   Platform.isAndroid ? await Firebase.initializeApp(
 //     options: const FirebaseOptions(
-//       apiKey: 'AIzaSyDWIjc77rGqlmxx0Ru11QEITRQFbB3w6bk', 
-//       appId: '1:449861433869:android:a4a919c2692e07529d7344', 
-//       messagingSenderId: '449861433869', 
+//       apiKey: 'AIzaSyDWIjc77rGqlmxx0Ru11QEITRQFbB3w6bk',
+//       appId: '1:449861433869:android:a4a919c2692e07529d7344',
+//       messagingSenderId: '449861433869',
 //       projectId: 'gugu-36085',
 //       )
 //   ) : await Firebase.initializeApp();
