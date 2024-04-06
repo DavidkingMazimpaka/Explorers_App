@@ -4,22 +4,14 @@
 
 The Explorer's Path mobile app is a digital tool designed to assist users in navigating and discovering new locations, attractions, and points of interest. It provides users with interactive maps, detailed information about landmarks and destinations, and personalized recommendations based on their preferences and interests.
 
-## Features
-
-- Interactive maps for easy navigation
-- Detailed information about landmarks and destinations
-- Personalized recommendations based on user preferences
-- GPS navigation functionality
-- Reviews and user-generated content
-- Explore hidden gems and off-the-beaten-path locations
-
 ## Getting Started
 
 To get started with the Explorer's Path mobile app, follow these steps:
 
-1. Create an account or log in with your existing account.
-2. Explore the app's features and discover new locations!
-3. Provide feedback and contribute to the community by sharing your experiences and recommendations.
+1. Clone the repo and install all the necessary dependencies (refer to our pubspec.yaml)
+2. Create an account or log in with your existing account.
+3. Explore the app's features and discover new locations!
+4. Provide feedback and contribute to the community by sharing your experiences and recommendations.
 
 ## Support and Feedback
 
