@@ -106,7 +106,7 @@ class Destination {
     required this.distance,
     required this.rate,
     required this.osm,
-    required this.kinds,
+    required this.kinds, 
   });
 
 //   factory Destination.fromApiJson(Map<String, dynamic> json) {
@@ -124,17 +124,16 @@ class Destination {
 //   }
 // }
 
-  factory Destination.fromApiJson(Map<String, dynamic> json) {
-    final properties = json['properties'];
-    return Destination(
-      id: properties['xid'] as String? ?? '', // Providing default empty string
-      name: properties['name'] as String? ?? 'Name not available',
-      distance: properties['dist'] as double? ??
-          0.0, // Assuming distance can be safely defaulted to 0.0
-      rate: properties['rate'] as int? ??
-          0, // Assuming rate can be safely defaulted to 0
-      osm: properties['osm'] as String? ?? '',
-      kinds: properties['kinds'] as String? ?? '',
-    );
-  }
+
+factory Destination.fromApiJson(Map<String, dynamic> json) {
+  final properties = json['properties'];
+  return Destination(
+    id: properties['xid'] as String? ?? '', // Providing default empty string
+    name: properties['name'] as String? ?? 'Name not available',
+    distance: properties['dist'] as double? ?? 0.0, // Assuming distance can be safely defaulted to 0.0
+    rate: properties['rate'] as int? ?? 0, // Assuming rate can be safely defaulted to 0
+    osm: properties['osm'] as String? ??'',
+    kinds: properties['kinds'] as String? ?? '',
+);
+}
 }
