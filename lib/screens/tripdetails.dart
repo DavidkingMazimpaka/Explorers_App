@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TripDetailsScreen extends StatelessWidget {
-  const TripDetailsScreen({Key? key}) : super(key: key);
+  const TripDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

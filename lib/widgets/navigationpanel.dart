@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NavigationPanel extends StatelessWidget {
-  const NavigationPanel({Key? key}) : super(key: key);
+  const NavigationPanel({super.key});
 
   @override
   Widget build(BuildContext context) {

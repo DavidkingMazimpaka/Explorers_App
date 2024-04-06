@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  MyApp({super.key});
 
   final Map<String, WidgetBuilder> _routes = {
     '/logout': (context) => const LogoutScreen(),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 class LogoutScreen extends StatelessWidget {
   static const String routeName = '/logout';
 
-  const LogoutScreen({Key? key}) : super(key: key);
+  const LogoutScreen({super.key});
 
   void _showLogoutConfirmationDialog(BuildContext context) {
     showDialog(

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.helloworld.app-mergeDebugResources-14:/values-ta/values-ta.xml",
+            "outputFile": "com.example.helloworld.app-mergeDebugResources-21:/values-ta/values-ta.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\173923cf6a829a576232e3eb0550d4bc\\transformed\\jetified-play-services-base-18.1.0\\res\\values-ta\\values.xml",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\aeb903732bb735ca757684c3c628fa7f\\transformed\\core-1.6.0\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\f373c63c940a31f2e4cd568338e370f2\\transformed\\core-1.8.0\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

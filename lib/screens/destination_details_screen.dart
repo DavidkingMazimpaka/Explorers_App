@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:helloworld/screens/tripdetails.dart';
 
 class DestinationDetailsScreen extends StatelessWidget {
-  const DestinationDetailsScreen({Key? key}) : super(key: key);
+  const DestinationDetailsScreen({super.key});
 
   void navigateToTripDetails(BuildContext context) {
     Navigator.push(

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/screens/destination_details_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,10 @@ class HomeScreen extends StatelessWidget {
 
   // Placeholder method1()
   bool method1() {
-  // Example navigation logic
-  // Navigator.pushNamed(context, '/destination');
-  return true; // Indicate that method execution was successful
-}
-
+    // Example navigation logic
+    // Navigator.pushNamed(context, '/destination');
+    return true; // Indicate that method execution was successful
+  }
 
   // Placeholder method2()
   bool method2() {
@@ -54,8 +54,85 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+// class NavigationPanel extends StatelessWidget {
+//   const NavigationPanel({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Drawer(
+//       child: Container(
+//         width: 200,
+//         color: const Color(0xFF3B4948),
+//         child: Column(
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.only(
+//                 top: 20.0,
+//                 bottom: 30.0,
+//               ),
+//               child: Image.asset(
+//                 'assets/explorer.png',
+//                 width: 100,
+//                 height: 100,
+//               ),
+//             ),
+//             ListTile(
+//               leading: const Icon(Icons.place, color: Colors.white),
+//               title: const Text('Destinations',
+//                   style: TextStyle(color: Colors.white)),
+//               onTap: () {
+//                 // Navigate to the Destinations screen
+//                 Navigator.pop(context); // First, close the drawer
+//                 Navigator.pushNamed(context, '/home'); // Then navigate
+//               },
+//             ),
+//             ListTile(
+//               leading: const Icon(Icons.settings, color: Colors.white),
+//               title:
+//                   const Text('Settings', style: TextStyle(color: Colors.white)),
+//               onTap: () {
+//                 // Navigate to the Settings screen
+//                 Navigator.pop(context); // Close the drawer
+//                 Navigator.pushNamed(context,
+//                     '/profile'); // Replace '/settings' with actual route
+//               },
+//             ),
+//             ListTile(
+//               leading: const Icon(Icons.exit_to_app, color: Colors.white),
+//               title:
+//                   const Text('Log Out', style: TextStyle(color: Colors.white)),
+//               onTap: () {
+//                 // Handle logout logic here
+//                 Navigator.pop(context); // Close the drawer
+//                 // Navigate to the login screen or perform logout operation
+//                 Navigator.pushNamed(context, '/logout');
+//               },
+//             ),
+//             const Spacer(),
+//             const Padding(
+//               padding: EdgeInsets.all(16.0),
+//               child: Row(
+//                 children: [
+//                   Icon(Icons.account_circle, color: Colors.white, size: 24.0),
+//                   SizedBox(width: 8.0),
+//                   Text('User username', style: TextStyle(color: Colors.white)),
+//                 ],
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 class NavigationPanel extends StatelessWidget {
-  const NavigationPanel({Key? key}) : super(key: key);
+  const NavigationPanel({super.key});
+
+  Future<String> _getUsername() async {
+    final prefs = await SharedPreferences.getInstance();
+    // This will return 'Guest' if no username has been saved
+    return prefs.getString('username') ?? 'Guest';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +158,8 @@ class NavigationPanel extends StatelessWidget {
               title: const Text('Destinations',
                   style: TextStyle(color: Colors.white)),
               onTap: () {
-                // Navigate to the Destinations screen
-                Navigator.pop(context); // First, close the drawer
-                Navigator.pushNamed(context, '/home'); // Then navigate
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/home');
               },
             ),
             ListTile(
@@ -91,10 +167,8 @@ class NavigationPanel extends StatelessWidget {
               title:
                   const Text('Settings', style: TextStyle(color: Colors.white)),
               onTap: () {
-                // Navigate to the Settings screen
-                Navigator.pop(context); // Close the drawer
-                Navigator.pushNamed(context,
-                    '/profile'); // Replace '/settings' with actual route
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/profile');
               },
             ),
             ListTile(
@@ -102,22 +176,33 @@ class NavigationPanel extends StatelessWidget {
               title:
                   const Text('Log Out', style: TextStyle(color: Colors.white)),
               onTap: () {
-                // Handle logout logic here
-                Navigator.pop(context); // Close the drawer
-                // Navigate to the login screen or perform logout operation
+                Navigator.pop(context);
                 Navigator.pushNamed(context, '/logout');
               },
             ),
             const Spacer(),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Icon(Icons.account_circle, color: Colors.white, size: 24.0),
-                  SizedBox(width: 8.0),
-                  Text('User username', style: TextStyle(color: Colors.white)),
-                ],
-              ),
+            FutureBuilder<String>(
+              future: _getUsername(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.account_circle,
+                            color: Colors.white, size: 24.0),
+                        const SizedBox(width: 8.0),
+                        // Display the fetched username
+                        Text(snapshot.data!,
+                            style: const TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  );
+                } else {
+                  // Show loading or default text while waiting
+                  return const CircularProgressIndicator();
+                }
+              },
             ),
           ],
         ),
@@ -141,7 +226,6 @@ class AboveSection extends StatelessWidget {
     );
   }
 }
-
 
 class DestinationPage extends StatelessWidget {
   const DestinationPage({super.key});
@@ -199,7 +283,7 @@ class HeaderSection extends StatelessWidget {
 }
 
 class FeaturedDestinationsSection extends StatelessWidget {
-  const FeaturedDestinationsSection({Key? key}) : super(key: key);
+  const FeaturedDestinationsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -219,7 +303,7 @@ class FeaturedDestinationsSection extends StatelessWidget {
 }
 
 class AllDestinationsSection extends StatelessWidget {
-  const AllDestinationsSection({Key? key}) : super(key: key);
+  const AllDestinationsSection({super.key});
 
   @override
   Widget build(BuildContext context) {

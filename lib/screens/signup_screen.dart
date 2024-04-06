@@ -159,9 +159,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({super.key});
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
@@ -185,6 +186,44 @@ class _SignUpScreenState extends State<SignUpScreen> {
     super.dispose();
   }
 
+  // Future<void> _registerUser() async {
+  //   setState(() {
+  //     _isLoading = true;
+  //   });
+
+  //   try {
+  //     final UserCredential userCredential =
+  //         await _auth.createUserWithEmailAndPassword(
+  //       email: _emailController.text.trim(),
+  //       password: _passwordController.text.trim(),
+  //     );
+
+  //     // Assuming the user is successfully created
+  //     if (userCredential.user != null) {
+  //       // Optionally, store additional user information in Firestore
+  //       await FirebaseFirestore.instance
+  //           .collection('users')
+  //           .doc(userCredential.user!.uid)
+  //           .set({
+  //         'fullName': _fullNameController.text.trim(),
+  //         'userName': _userNameController.text.trim(),
+  //         // You can add more fields as needed
+  //       });
+
+  //       Navigator.of(context).pushReplacementNamed('/home');
+  //     }
+  //   } catch (e) {
+  //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+  //       content: Text("Failed to register. Please try again."),
+  //     ));
+  //     print(e); // Ideally, handle the error more gracefully
+  //   } finally {
+  //     setState(() {
+  //       _isLoading = false;
+  //     });
+  //   }
+  // }
+
   Future<void> _registerUser() async {
     setState(() {
       _isLoading = true;
@@ -197,17 +236,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         password: _passwordController.text.trim(),
       );
 
-      // Assuming the user is successfully created
       if (userCredential.user != null) {
-        // Optionally, store additional user information in Firestore
+        final String username = _userNameController.text.trim();
+        // Store additional user information in Firestore
         await FirebaseFirestore.instance
             .collection('users')
             .doc(userCredential.user!.uid)
             .set({
           'fullName': _fullNameController.text.trim(),
-          'userName': _userNameController.text.trim(),
-          // You can add more fields as needed
+          'userName': username,
         });
+
+        // Save the username for later retrieval
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('username', username);
 
         Navigator.of(context).pushReplacementNamed('/home');
       }
@@ -215,7 +257,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text("Failed to register. Please try again."),
       ));
-      print(e); // Ideally, handle the error more gracefully
+      print(e);
     } finally {
       setState(() {
         _isLoading = false;

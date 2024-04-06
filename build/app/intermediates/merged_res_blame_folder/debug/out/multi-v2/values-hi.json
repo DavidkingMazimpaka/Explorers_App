@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.helloworld.app-mergeDebugResources-14:/values-hi/values-hi.xml",
+            "outputFile": "com.example.helloworld.app-mergeDebugResources-21:/values-hi/values-hi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\06cc9f101885a01dee352cd1b0f1bb75\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-hi\\values.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\aeb903732bb735ca757684c3c628fa7f\\transformed\\core-1.6.0\\res\\values-hi\\values-hi.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\f373c63c940a31f2e4cd568338e370f2\\transformed\\core-1.8.0\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
